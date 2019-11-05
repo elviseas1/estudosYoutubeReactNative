@@ -2,21 +2,29 @@
 import React, {Component} from 'react';
 import {
   View,
-  Text
+  Text,
+  Image
 } from 'react-native';
 
-export default class App extends Component {
-
+class Ola extends Component {
   render(){
-  return (
-    <View>
-      <Text>
-        Vamos iniciar no React Native
-      </Text>
-      <Text>
-        Para iniciar edit p arquivo app.js
-      </Text>
-    </View>
-  )
+    return(
+      <View style={{alignItems: 'center'}}>
+        <Text>Olá {this.props.name}!!!</Text>
+      </View>
+    )
+  }
+}
+
+
+export default class Saudacoes extends Component {
+  render(){
+    return (
+      <View style={{alignItems: 'center', padding: 50}}>
+           <Ola name='Elvis'/>
+           <Ola name='Mirele'/>
+           <Ola name='Miguel'/>
+      </View>
+    );
   }
 }
