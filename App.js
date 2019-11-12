@@ -2,8 +2,7 @@
 import React, {Component} from 'react';
 import {
   View,
-  Text,
-  Image
+  Text
 } from 'react-native';
 
 class Ola extends Component {
