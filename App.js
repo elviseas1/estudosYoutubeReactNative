@@ -3,34 +3,31 @@ import React, {Component} from 'react';
 import {
   View,
   Text,
+  StyleSheet,
   Image
 } from 'react-native';
 
-class Clock extends Component{
-  constructor(props){
-    super(props);
-    this.state = {date: new Date()};
+const styles = StyleSheet.create({
+  bigblue:{
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 50, 
+  },
+  red: {
+    color: 'red',
+    fontSize: 30, 
+  }
+})
 
-    setInterval(() => { 
-      this.setState({date: new Date()})
-    }, 1000
-    );
-
-  };
-
+export default class StylesApp extends Component{
   render(){
     return(
-    <Text style={{fontSize: 50}}>Hora: {this.state.date.toLocaleTimeString()}</Text>
-    );
-  };
-};
-
-export default class ClockApp extends Component {
-  render(){
-    return(
-      <View style={{padding: 25}}>
-        <Clock />
+      <View style={{padding: 50}}>
+        <Text style={styles.red}>Vermelho</Text>
+        <Text style={styles.bigblue}>Azul</Text>
+        <Text style={[styles.bigblue, styles.red]}>Azul, depois Vermelho</Text>
+        <Text style={[styles.red, styles.bigblue]}>Vermelho, depois Azul</Text>
       </View>
     );
-  };
-};
+  }
+}
