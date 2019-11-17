@@ -4,16 +4,27 @@ import {
   View,
   Text,
   StyleSheet,
-  Image
+  Image,
+  TextInput
 } from 'react-native';
 
-export default class FlexboxApp extends Component{
+export default class PizzaTranslatorApp extends Component{
+  constructor(props){
+    super(props);
+    this.state = {text: ''};
+  };
+
   render(){
     return(
-      <View style={{flex: 1, flexDirection: "column", justifyContent: "center", alignItems: 'stretch',}}>
-        <View style={{width:80, height: 80, backgroundColor: 'powderblue'}}></View>
-        <View style={{height: 80, backgroundColor: 'skyblue'}}></View>
-        <View style={{height: 180, backgroundColor: 'steelblue'}}></View>
+      <View style={{padding: 40}}>
+        <TextInput 
+          style={{height: 50, fontSize: 30}}
+          placeholder= 'Digite aqui para traduzir!'
+          onChangeText= {(text) => this.setState({text})}
+        />
+        <Text style={{padding: 10, fontSize: 50}}>
+          {this.state.text.split(' ').map( (word) => (word) ? ':P' : ' ' )}
+        </Text>
       </View>
     );
   }
