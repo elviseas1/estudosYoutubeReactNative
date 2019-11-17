@@ -8,58 +8,61 @@ import {
   TextInput,
   Button,
   Alert,
-  ScrollView
+  ScrollView,
+  FlatList
 } from 'react-native';
 
-export default class ScrollViewApp extends Component{
+export default class FlatListApp extends Component{
 
   render(){
     return(
-      <ScrollView style={{padding: 40}}>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
-        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
-        </View>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
-        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
-        </View>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
-        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
-        </View>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
-        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
-        </View>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
-        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
-        </View>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
-        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
-        </View>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
-        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
-        </View>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
-        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
-        </View>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
-        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
-        </View>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
-        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
-        </View>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
-        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
-        </View>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
-        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
-        </View>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
-        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
-        </View>
-        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
-        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
-        </View>
-        
-      </ScrollView>
+      <View style={styles.container}>
+        <FlatList
+          data={[
+            {key: 'Homem de Ferro'},
+            {key: 'Hulk'},
+            {key: 'Thor'},
+            {key: 'Capitão America'},
+            {key: 'Homem Aranha'},
+            {key: 'Viuva Negra'},
+            {key: 'Gavião Arqueiro'},
+            {key: 'Homem Formiga'},
+            {key: 'Homem de Ferro'},
+            {key: 'Hulk'},
+            {key: 'Thor'},
+            {key: 'Capitão America'},
+            {key: 'Homem Aranha'},
+            {key: 'Viuva Negra'},
+            {key: 'Gavião Arqueiro'},
+            {key: 'Homem Formiga'},
+            {key: 'Homem de Ferro'},
+            {key: 'Hulk'},
+            {key: 'Thor'},
+            {key: 'Capitão America'},
+            {key: 'Homem Aranha'},
+            {key: 'Viuva Negra'},
+            {key: 'Gavião Arqueiro'},
+            {key: 'Homem Formiga'},
+
+            
+          ]}
+          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+        />
+
+      </View>
+      
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 40
+  },
+  item:{
+    padding: 10,
+    fontSize: 30,
+    height: 60
+  }
+})
