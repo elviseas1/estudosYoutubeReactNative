@@ -25,7 +25,7 @@ export default class PizzaTranslatorApp extends Component{
         <Text style={{padding: 10, fontSize: 50}}>
           {this.state.text.split(' ').map( (word) => (word) ? ':P' : ' ' )}
         </Text>
-      </View>
+      </View> 
     );
   }
 }
