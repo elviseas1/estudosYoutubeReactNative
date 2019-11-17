@@ -9,44 +9,24 @@ import {
   Button,
   Alert,
   ScrollView,
-  FlatList
+  FlatList,
+  SectionList
 } from 'react-native';
 
-export default class FlatListApp extends Component{
+export default class SectionListApp extends Component{
 
   render(){
     return(
       <View style={styles.container}>
-        <FlatList
-          data={[
-            {key: 'Homem de Ferro'},
-            {key: 'Hulk'},
-            {key: 'Thor'},
-            {key: 'Capitão America'},
-            {key: 'Homem Aranha'},
-            {key: 'Viuva Negra'},
-            {key: 'Gavião Arqueiro'},
-            {key: 'Homem Formiga'},
-            {key: 'Homem de Ferro'},
-            {key: 'Hulk'},
-            {key: 'Thor'},
-            {key: 'Capitão America'},
-            {key: 'Homem Aranha'},
-            {key: 'Viuva Negra'},
-            {key: 'Gavião Arqueiro'},
-            {key: 'Homem Formiga'},
-            {key: 'Homem de Ferro'},
-            {key: 'Hulk'},
-            {key: 'Thor'},
-            {key: 'Capitão America'},
-            {key: 'Homem Aranha'},
-            {key: 'Viuva Negra'},
-            {key: 'Gavião Arqueiro'},
-            {key: 'Homem Formiga'},
-
-            
+        <SectionList
+          sections={[
+            {title: 'Hérois', data: ['Homem de Ferro', 'Hulk','Thor', 'Capitão America', 'Homem Aranha', 'Viuva Negra', 'Gavião Arqueiro', 'Homem Formiga']},
+            {title: 'Vilões', data: ['Loki', 'Ultron', 'Thanos', 'Venon', 'Duende Verde', 'Electro']},
+            {title: 'Conjugues dos Hérois', data: ['Pepper', 'She-Hulk', 'Jane Foster', 'Peggy', 'Mary Jane Watson', '', 'Jeremy Renner', 'Vespa']}           
           ]}
-          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+          renderItem={({item}) => <Text style={styles.item}>{item}</Text>}
+          renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
+          keyExtractor= {(item, index) => index}
         />
 
       </View>
@@ -64,5 +44,14 @@ const styles = StyleSheet.create({
     padding: 10,
     fontSize: 30,
     height: 60
-  }
+  },
+  sectionHeader:{
+    paddingTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 2,
+    fontSize: 30,
+    fontWeight: 'bold',
+    backgroundColor: 'steelblue'
+  },
 })
