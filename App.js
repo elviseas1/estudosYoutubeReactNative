@@ -8,58 +8,58 @@ import {
   TextInput,
   Button,
   Alert,
+  ScrollView
 } from 'react-native';
 
-export default class ButtonApp extends Component{
-  onPressButton(){
-    Alert.alert('Você clicou no botão!')
-  }
+export default class ScrollViewApp extends Component{
 
   render(){
     return(
-      <View style={styles.container}>
-        <View style={styles.butonContainer}>
-          <Button 
-            onPress= {this.onPressButton}
-            title= 'Clique aqui!'
-          />
+      <ScrollView style={{padding: 40}}>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
+        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
         </View>
-        <View style={styles.butonContainer}>
-          <Button 
-            onPress= {this.onPressButton}
-            title= 'Clique aqui!'
-            color= '#841584'
-          />
-        </View> 
-        <View style={styles.alternativeButtonContainer}>
-          <Button 
-          onPress= {this.onPressButton}
-          title= 'Parece ok!'
-          />
-        </View>  
-        <View style={styles.alternativeButtonContainer}>
-          <Button 
-          onPress= {this.onPressButton}
-          title= 'ok!'
-          color= '#841584'
-          />
-        </View> 
-      </View>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
+        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
+        </View>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
+        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
+        </View>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
+        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
+        </View>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
+        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
+        </View>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
+        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
+        </View>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
+        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
+        </View>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
+        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
+        </View>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
+        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
+        </View>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
+        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
+        </View>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
+        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
+        </View>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
+        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
+        </View>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-end'}}>
+        <Text style={{fontSize: 40 }}>Oi, tudo bem?</Text>
+        </View>
+        <View style={{margin: 20,  flexDirection: 'row', justifyContent: 'flex-start'}}>
+        <Text style={{fontSize: 40, }}>Tudo bem, e vc?</Text>
+        </View>
+        
+      </ScrollView>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-     flex: 1,
-    justifyContent: 'center',
-  },
-  butonContainer: {
-    margin: 20,
-  },
-  alternativeButtonContainer: {
-    margin: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  }
-})
